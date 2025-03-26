@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Contact from '../views/Contact.vue'
-//you can import other pages like Recrutement.vue here when ready
+import Recrutement from '../views/Recrutement.vue'
 
 const routes = [
   {
@@ -17,8 +17,8 @@ const routes = [
   {
     path: '/recrutement',
     name: 'Recrutement',
-    component: () => import('../views/Recrutement.vue')
-  },
+    component: Recrutement
+  }
 ]
 
 const router = createRouter({
