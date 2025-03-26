@@ -3,7 +3,7 @@
   <div class="bg-dark text-white py-1 small-navbar">
     <div class="container d-flex justify-content-between">
       <div>
-        <a href="/recrutement" class="text-white me-3 text-decoration-none">Recrutement</a>
+        <a href="/Recrutement" class="text-white me-3 text-decoration-none">Recrutement</a>
         <a href="/Contact" class="text-white text-decoration-none">Contact</a>
       </div>
     </div>
