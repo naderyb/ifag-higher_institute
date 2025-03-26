@@ -19,12 +19,6 @@ const routes = [
     name: 'Recrutement',
     component: () => import('../views/Recrutement.vue')
   },
-  {
-    path: '/contact',
-    name: 'Contact',
-    component: () => import('@/views/Contact.vue')
-  }
-
 ]
 
 const router = createRouter({
