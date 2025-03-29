@@ -10,10 +10,11 @@
 </template>
 
 <style scoped>
-body {
+body, html {
   background-color: white;
   color: #212529;
   font-family: 'poppins';
+  overflow-x: hidden;
 }
 
 .btn-danger {

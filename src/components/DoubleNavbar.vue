@@ -1,10 +1,30 @@
 <template>
   <!-- 🔝 Mini navbar -->
   <div class="bg-dark text-white py-1 small-navbar">
-    <div class="container d-flex justify-content-between">
-      <div>
+    <div class="container d-flex justify-content-between align-items-center py-1">
+      <div class="d-flex align-items-center">
         <a href="/Recrutement" class="text-white me-3 text-decoration-none">Recrutement</a>
         <a href="/Contact" class="text-white text-decoration-none">Contact</a>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <a href="https://www.facebook.com/INSAGBusinessSchool/" target="_blank" class="social-icon"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a
+          href="https://www.instagram.com/ifag_higherinstitute/"
+          target="_blank"
+          class="social-icon"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://www.tiktok.com/@ifaghigherinstitute" target="_blank" class="social-icon"
+          ><i class="fab fa-tiktok"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/school/insag-alg%C3%A9rie/posts/?feedView=all&viewAsMember=true"
+          target="_blank"
+          class="social-icon"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
       </div>
     </div>
   </div>
@@ -109,15 +129,15 @@ onMounted(async () => {
   const { default: Dropdown } = await import('bootstrap/js/dist/dropdown')
 
   // Initialize all Bootstrap dropdowns
-  document.querySelectorAll('[data-bs-toggle="dropdown"]').forEach(triggerEl => {
+  document.querySelectorAll('[data-bs-toggle="dropdown"]').forEach((triggerEl) => {
     new Dropdown(triggerEl)
   })
 
   // Smooth scroll for anchor links + close menu on link click
   const links = document.querySelectorAll('.navbar .nav-link, .dropdown-item')
 
-  links.forEach(link => {
-    link.addEventListener('click', e => {
+  links.forEach((link) => {
+    link.addEventListener('click', (e) => {
       const href = link.getAttribute('href')
 
       if (href && href.startsWith('#')) {
@@ -139,7 +159,20 @@ onMounted(async () => {
 
 <style scoped>
 .small-navbar {
-  font-size: 14px;
+  font-size: 13px;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  line-height: 1;
+}
+
+.small-navbar .container {
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}
+
+.small-navbar a {
+  font-size: 13px;
+  padding: 2px 6px;
 }
 
 .custom-navbar .nav-link {
@@ -168,6 +201,24 @@ onMounted(async () => {
 
 .custom-navbar .nav-link:hover::after {
   width: calc(100% - 30px);
+}
+
+/* 🌐 Social icons styling */
+.social-icon {
+  color: #fff;
+  font-size: 13px;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  background-color: #aa0000;
+  transform: scale(1.1);
 }
 
 /* Dropdown */

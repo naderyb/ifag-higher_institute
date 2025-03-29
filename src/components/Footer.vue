@@ -68,19 +68,16 @@
       <div class="text-center mb-3">
         <p class="small text-uppercase mb-2 text-white-50">Suivez-nous</p>
         <div class="d-flex justify-content-center gap-3">
-          <a href="https://www.facebook.com/ifagdz" target="_blank" class="social-icon"
+          <a href="https://www.facebook.com/INSAGBusinessSchool/" target="_blank" class="social-icon"
             ><i class="fab fa-facebook-f"></i
           ></a>
-          <a href="https://www.instagram.com/ifagdz" target="_blank" class="social-icon"
+          <a href="https://www.instagram.com/ifag_higherinstitute/" target="_blank" class="social-icon"
             ><i class="fab fa-instagram"></i
           ></a>
-          <a href="https://www.youtube.com/@ifagdz" target="_blank" class="social-icon"
-            ><i class="fab fa-youtube"></i
-          ></a>
-          <a href="https://www.tiktok.com/@ifagdz" target="_blank" class="social-icon"
+          <a href="https://www.tiktok.com/@ifaghigherinstitute" target="_blank" class="social-icon"
             ><i class="fab fa-tiktok"></i
           ></a>
-          <a href="https://www.linkedin.com/school/ifagdz" target="_blank" class="social-icon"
+          <a href="https://www.linkedin.com/school/insag-alg%C3%A9rie/posts/?feedView=all&viewAsMember=true" target="_blank" class="social-icon"
             ><i class="fab fa-linkedin-in"></i
           ></a>
         </div>
@@ -95,7 +92,6 @@
         <a href="/confidentialite" class="footer-link">Politique de confidentialité</a>
         <span class="text-white-50"> | </span>
         <a href="/conditions" class="footer-link">Conditions générales</a>
-        <span class="text-white-50"> | </span>
       </div>
 
       <!-- Copyright -->

@@ -272,6 +272,11 @@
 </template>
 
 <style scoped>
+
+body {
+  overflow-x: hidden;
+}
+
 .hero-section {
   background-size: cover;
   background-position: center;
@@ -330,12 +335,14 @@ h2::after {
   white-space: nowrap;
   padding: 1rem 0;
   scroll-behavior: smooth;
+  max-width: 100%;
 }
 
 .partner-logo {
   max-height: 80px;
   object-fit: contain;
   flex-shrink: 0;
+  max-width: 100%;
 }
 
 .scroll-container::-webkit-scrollbar {
@@ -344,6 +351,10 @@ h2::after {
 .scroll-container::-webkit-scrollbar-thumb {
   background-color: #d90000;
   border-radius: 10px;
+}
+
+.container {
+  overflow-x: hidden;
 }
 
 .accordion-button {
@@ -541,19 +552,18 @@ const clubs = [
 
 const faqItems = ref([
   {
-    question: "Est-ce que vos formations sont agrées par le MESRS?",
+    question: 'Est-ce que vos formations sont agrées par le MESRS?',
     answer:
       "Oui, toutes nos formations sont agrées par le Ministère de l'Enseignement Supérieur et de la Recherche Scientifique (arrêté n° 341 du 11 avril 2018).",
   },
   {
-    question: 'Est-ce que le diplôme est reconnu a l\'étranger?',
+    question: "Est-ce que le diplôme est reconnu a l'étranger?",
     answer:
       "Oui, nos diplômes sont reconnus à l'international et vous ouvrent des portes dans de nombreux pays.",
   },
   {
-    question: 'Quelles sont les conditions d\'admission?',
-    answer:
-      "Il faut avoir le baccalauréat ou un diplôme équivalent.",
+    question: "Quelles sont les conditions d'admission?",
+    answer: 'Il faut avoir le baccalauréat ou un diplôme équivalent.',
   },
   {
     question: 'Quels sont les frais de scolarité?',
