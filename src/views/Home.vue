@@ -4,6 +4,7 @@
   <div>
     <!-- Hero Section -->
     <section
+      id="hero"
       class="hero-section position-relative text-center d-flex align-items-center justify-content-center"
       style="height: 100vh"
     >
@@ -20,7 +21,7 @@
 
       <div class="glass-container text-white p-5 rounded" style="z-index: 2">
         <h1 class="display-4 fw-bold">Bienvenue à l'IFAG</h1>
-        <p class="lead">Une école d’excellence pour votre avenir</p>
+        <p class="lead">Une école d'excellence pour votre avenir</p>
         <button @click="scrollToSection" class="btn btn-danger">Commençons</button>
       </div>
     </section>
@@ -156,7 +157,7 @@
         <div class="row justify-content-center">
           <div class="col-md-3" data-aos="fade-up">
             <h3 v-if="chiffresVisible"><CountUp :end-val="32" duration="3" />+</h3>
-            <p>ans d'expérience & d’expertise</p>
+            <p>ans d'expérience & d'expertise</p>
           </div>
           <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
             <h3 v-if="chiffresVisible"><CountUp :end-val="8000" duration="3" />+</h3>
@@ -223,6 +224,43 @@
       </div>
     </div>
   </section>
+
+  <div class="section-divider my-5"></div>
+  <!-- Foire Aux Questions -->
+  <section id="faq" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4 fw-bold" style="color: #d90000">FAQ</h2>
+
+      <div class="accordion" id="faqAccordion">
+        <div
+          v-for="(item, index) in faqItems"
+          :key="index"
+          class="accordion-item mb-3 border-0 shadow-sm rounded-3"
+        >
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button fw-semibold fs-5 collapsed"
+              type="button"
+              :data-bs-toggle="'collapse'"
+              :data-bs-target="'#faq-' + index"
+            >
+              {{ item.question }}
+            </button>
+          </h2>
+          <div
+            :id="'faq-' + index"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              {{ item.answer }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <button
     v-if="showBackToTop"
     @click="scrollToTop"
@@ -306,6 +344,52 @@ h2::after {
 .scroll-container::-webkit-scrollbar-thumb {
   background-color: #d90000;
   border-radius: 10px;
+}
+
+.accordion-button {
+  background-color: #ffffff;
+  color: #333;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+  border-radius: 10px !important;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-button:hover {
+  background-color: #f8f9fa;
+  transform: scale(1.02);
+}
+
+.accordion-body {
+  background-color: #fff;
+  border-radius: 0 0 10px 10px;
+  padding: 1rem 1.25rem;
+  color: #555;
+}
+.accordion-item {
+  border: none;
+}
+.accordion-item::before {
+  content: '';
+  display: block;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #d90000, transparent);
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 2px;
+}
+.accordion-item::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #d90000, transparent);
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 2px;
 }
 
 @keyframes fadeIn {
@@ -429,7 +513,6 @@ const blogPosts = [
     title: "لَمَّةْ l'ifag",
     image: '/actu/lemma-video.mp4',
     description:
-
       'Une لَمَّةْ conviviale et festive et une collecte de dons pour les orphelins en collaboration avec <span style="color: #050DEB; text-shadow: 0 0 10px #050DEB; font-weight: bold;">Nexus Club</span>, <span style="color: #274199; text-shadow: 0 0 10px #274199; font-weight: bold;">MS Club</span> et <span style="color: brown; text-shadow: 0 0 10px brown; font-weight: bold;">in2art</span> réunissant étudiants, professeurs et personnels pour un iftar, une sahra et une cérémonie de récompense des majeurs.',
   },
   {
@@ -455,4 +538,27 @@ const clubs = [
     instagram: 'https://www.instagram.com/nexus.club_/',
   },
 ]
+
+const faqItems = ref([
+  {
+    question: "Est-ce que vos formations sont agrées par le MESRS?",
+    answer:
+      "Oui, toutes nos formations sont agrées par le Ministère de l'Enseignement Supérieur et de la Recherche Scientifique (arrêté n° 341 du 11 avril 2018).",
+  },
+  {
+    question: 'Est-ce que le diplôme est reconnu a l\'étranger?',
+    answer:
+      "Oui, nos diplômes sont reconnus à l'international et vous ouvrent des portes dans de nombreux pays.",
+  },
+  {
+    question: 'Quelles sont les conditions d\'admission?',
+    answer:
+      "Il faut avoir le baccalauréat ou un diplôme équivalent.",
+  },
+  {
+    question: 'Quels sont les frais de scolarité?',
+    answer:
+      "Les frais de scolarité varient selon la formation choisie. Pour plus d'informations, veuillez nous contacter directement.",
+  },
+])
 </script>

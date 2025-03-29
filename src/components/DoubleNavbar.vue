@@ -12,7 +12,7 @@
   <!-- 🔻 Navbar principale -->
   <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top custom-navbar">
     <div class="container">
-      <img src="/logo-ifag.jpg" class="me-3" style="width: 20vh;" alt="Logo IFAG" />
+      <img src="/logo-ifag.jpg" class="me-3" style="width: 20vh" alt="Logo IFAG" />
       <button
         class="navbar-toggler"
         type="button"
@@ -25,7 +25,7 @@
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <router-link class="nav-link" to="/">Accueil</router-link>
+            <a class="nav-link" href="#hero" @click.prevent="scrollToHero">Accueil</a>
           </li>
 
           <!-- ✅ Dropdown -->
@@ -40,16 +40,11 @@
             >
               Nos Formations
             </a>
-            <ul class="dropdown-menu" aria-labelledby="formationsDropdown">
-              <li><a class="dropdown-item" href="#formation">Licence Action Commerciale</a></li>
-              <li><a class="dropdown-item" href="#formation">Licence Informatique</a></li>
-              <li><a class="dropdown-item" href="#formation">Licence Finance & Comptabilité</a></li>
-            </ul>
           </li>
 
           <li class="nav-item"><a class="nav-link" href="#alumni">Nos Alumni</a></li>
           <li class="nav-item"><a class="nav-link" href="#actu">Actu IFAG</a></li>
-          <li class="nav-item"><a class="nav-link" href="#vie">Vie Étudiante</a></li>
+          <li class="nav-item"><a class="nav-link" href="#vie-etudiante">Vie Étudiante</a></li>
           <li class="nav-item"><a class="nav-link" href="#chiffres">IFAG en chiffres</a></li>
           <li class="nav-item">
             <router-link class="nav-link" to="/contact">Contact</router-link>
@@ -60,11 +55,88 @@
     </div>
   </nav>
 </template>
-//problem: dropdown menu of formation doesnt work,
-//the section of the navbar doesnt work correctly
-//and i need to focus tomorow on formation thing
-//mzl endi problem m3a la video size t3ha kbir bah ndirha f github
-//du coup lzm nchouf solution khlaf mn ghir youtub psq nn bonwi
+
+<script setup>
+import { onMounted } from 'vue'
+import { useRouter, useRoute } from 'vue-router'
+
+const router = useRouter()
+const route = useRoute()
+
+/**
+ * Close the mobile navbar if it's open (Bootstrap collapse)
+ */
+const closeNavbar = () => {
+  const navbarCollapse = document.querySelector('.navbar-collapse')
+  if (navbarCollapse?.classList.contains('show')) {
+    import('bootstrap/js/dist/collapse').then(({ default: Collapse }) => {
+      const bsCollapse = Collapse.getInstance(navbarCollapse)
+      bsCollapse?.hide()
+    })
+  }
+}
+
+/**
+ * Scroll smoothly to the #hero section
+ */
+const scrollToHero = () => {
+  const scroll = () => {
+    const hero = document.querySelector('#hero')
+    if (hero) {
+      requestAnimationFrame(() => {
+        hero.scrollIntoView({ behavior: 'smooth' })
+        closeNavbar()
+      })
+    }
+  }
+
+  if (route.path === '/') {
+    scroll()
+  } else {
+    router.push('/').then(() => {
+      // Wait for DOM to update
+      setTimeout(() => {
+        scroll()
+      }, 150)
+    })
+  }
+}
+
+/**
+ * Initialize dropdowns and smooth scrolling
+ */
+onMounted(async () => {
+  const { default: Dropdown } = await import('bootstrap/js/dist/dropdown')
+
+  // Initialize all Bootstrap dropdowns
+  document.querySelectorAll('[data-bs-toggle="dropdown"]').forEach(triggerEl => {
+    new Dropdown(triggerEl)
+  })
+
+  // Smooth scroll for anchor links + close menu on link click
+  const links = document.querySelectorAll('.navbar .nav-link, .dropdown-item')
+
+  links.forEach(link => {
+    link.addEventListener('click', e => {
+      const href = link.getAttribute('href')
+
+      if (href && href.startsWith('#')) {
+        e.preventDefault()
+
+        const target = document.querySelector(href)
+        if (target) {
+          requestAnimationFrame(() => {
+            target.scrollIntoView({ behavior: 'smooth' })
+          })
+        }
+      }
+
+      closeNavbar()
+    })
+  })
+})
+</script>
+
 <style scoped>
 .small-navbar {
   font-size: 14px;
@@ -79,7 +151,7 @@
 }
 
 .custom-navbar .nav-link::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 5px;
   left: 15px;
@@ -114,30 +186,3 @@
   background-color: #f1f1f1;
 }
 </style>
-
-<script setup>
-import { onMounted } from 'vue'
-import * as bootstrap from 'bootstrap'
-
-onMounted(() => {
-  // Active dropdown
-  const dropdownTriggerList = document.querySelectorAll('[data-bs-toggle="dropdown"]')
-  dropdownTriggerList.forEach(triggerEl => {
-    new bootstrap.Dropdown(triggerEl)
-  })
-
-  // Scroll to top + auto-close menu
-  const links = document.querySelectorAll('.navbar .nav-link, .dropdown-item')
-  links.forEach(link => {
-    link.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' })
-
-      const navbarCollapse = document.querySelector('.navbar-collapse')
-      if (navbarCollapse.classList.contains('show')) {
-        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse)
-        if (bsCollapse) bsCollapse.hide()
-      }
-    })
-  })
-})
-</script>
