@@ -6,7 +6,7 @@
   <p align="center">
     A modern, responsive, Vue 3 + Bootstrap powered frontend ✨ <br>
     for the <strong>Institut de Formation en Assurances et Gestion (IFAG)</strong><br>
-    Built with <code>&lt;3</code> by <a href="https://nader-youb.netlify.app" target="_blank">Youb Nader</a>
+    Built with <code>&lt;3</code> by Youb Nader
   </p>
 
   <img src="https://readme-typing-svg.herokuapp.com?font=Poppins&size=22&duration=3000&center=true&vCenter=true&width=500&lines=Modern+UI%2FUX;Vue+3+%2B+Bootstrap+Frontend;Dark+mode+ready+%F0%9F%94%95;SEO+optimized+%F0%9F%93%9D;For+a+clean+backend+integration+%F0%9F%A7%96%E2%80%8D%E2%99%82%EF%B8%8F" alt="Typing SVG" />
@@ -18,8 +18,7 @@
 This is the frontend for **IFAG**’s new website – completely redesigned from scratch with a focus on:
 
 - ✅ Modern & professional look  
-- 🎯 Mobile-first responsiveness  
-- 🌗 Full dark mode support (with primary red `#d90000`)  
+- 🎯 Mobile-first responsiveness    
 - ✨ Animated sections, clean UI, and smooth transitions  
 - 📊 Interactive homepage with formations, alumni, blog, clubs, stats, and more  
 - 💼 SEO-friendly & accessible markup  
