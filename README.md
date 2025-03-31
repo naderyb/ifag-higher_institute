@@ -31,26 +31,13 @@ This is the frontend for **IFAG**’s new website – completely redesigned from
 | Frontend     | Tool               |
 |--------------|--------------------|
 | Vue          | 3 (Composition API) |
-| Bootstrap    | 5.x                |
+| Bootstrap    | 5.3.3               |
 | Vite         | ⚡ Ultra Fast Build |
 | Font Awesome | Icon Library       |
 | Google Fonts | Poppins & Roboto   |
 ---
 
 ## 📁 Folder Structure (Frontend)
-
-📦 ifag-frontend
-├── 📁 public
-│ └── index.html – SEO, meta, and favicon
-├── 📁 src
-│ ├── 📁 assets – Images, icons, and static files
-│ ├── 📁 components – Navbar, Footer, Cards, FAQ, etc.
-│ ├── 📁 views – All main pages like Home.vue, Contact.vue, etc.
-│ ├── 📁 router – Vue Router configuration
-│ ├── 📁 styles – Global styles and theme handling
-│ ├── App.vue – Main layout
-│ └── main.js – Entry point
-└── vite.config.js – Vite configuration
 
 > 🔁 Everything is organized, modular, and easy to plug into your backend. You can focus on routes & APIs while the frontend handles the rest 💯
 ---
@@ -124,22 +111,15 @@ If you're working in parallel, let's sync in GitHub issues or on Discord/WhatsAp
 ## 👤 Author
 
 Made with passion 💻 and a touch of red ❤️ by [Youb Nader](https://www.instagram.com/unnamed0._)  
-For the students and future of [IFAG](https://ifag.edu.dz)
+For the students and future of [IFAG](https://ifag-higher-institute.netlify.app)
 ---
 ## 📡 Hosting Note
 >🛰️ This site is currently hosted on Netlify as a serverless static site.
 >Please contact me before deploying it on any real or virtual server (Apache, Nginx, etc.) — I’d love to assist and observe the process 💬
-Reach me via my Instagram [unnamed0._](https://www.instagram.com/unnamed0._) or my [whatsapp](https://wa.me/213540588987)
+>Reach me via my Instagram [unnamed0._](https://www.instagram.com/unnamed0._) or my [whatsapp](https://wa.me/213540588987)
 ---
 ## ⭐️ Show some love
 
 If you like this project, drop a ⭐️ on the GitHub repo or share it around!
 ---
-<p align="center" style="opacity: 0.7;"> © 2025 – Made with ❤️ by <strong>Youb Nader</strong> • Built with Vue 3 + Bootstrap </p> ```
-
-
-
-
-
-
-
+<p align="center" style="opacity: 0.7;"> © 2025 – Made with ❤️ by <strong>Youb Nader</strong> • Built with Vue 3 + Bootstrap </p>
