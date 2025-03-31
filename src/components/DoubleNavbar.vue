@@ -32,7 +32,9 @@
   <!-- 🔻 Navbar principale -->
   <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top custom-navbar">
     <div class="container">
-      <img src="/logo-ifag.jpg" class="me-3" style="width: 20vh" alt="Logo IFAG" />
+      <router-link to="/">
+        <img src="/logo-ifag.jpg" class="me-3" style="width: 20vh" alt="Logo IFAG" />
+      </router-link>
       <button
         class="navbar-toggler"
         type="button"
