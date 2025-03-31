@@ -528,18 +528,18 @@ const blogPosts = [
       "Programme d'intégration conçu pour préparer les nouveaux étudiants au mieux à leur parcours académique et à leur immersion dans la vie de notre établissement.",
   },
   {
-    date: '13/03/2025',
-    title: "لَمَّةْ l'ifag",
-    image: '/actu/lemma-video.mp4',
-    description:
-      'Une لَمَّةْ conviviale et festive et une collecte de dons pour les orphelins en collaboration avec <span style="color: #050DEB; text-shadow: 0 0 10px #050DEB; font-weight: bold;">Nexus Club</span>, <span style="color: #274199; text-shadow: 0 0 10px #274199; font-weight: bold;">MS Club</span> et <span style="color: brown; text-shadow: 0 0 10px brown; font-weight: bold;">in2art</span> réunissant étudiants, professeurs et personnels pour un iftar, une sahra et une cérémonie de récompense des majeurs.',
-  },
-  {
     date: '24/11/2024',
     title: "Journée de l'Entrepreneuriat",
     image: '/actu/Journée-Entreprenariat.jpeg',
     description:
       'Nous avons eu le plaisir d\'accueillir le co-fondateur et CEO de <span style="color: #FBBE0D; text-shadow: 0 0 10px #FBBE0D; font-weight: bold;">Oued</span><span style="color: #4889F4; text-shadow: 0 0 10px #4889F4; font-weight: bold;">Kniss</span> Monsieur <span style="font-weight: bold;">BOUZID Mehdi Mounis</span> qui à partager avec nous et nos étudiants son expérience et son parcours professionnel.',
+  },
+  {
+    date: '13/03/2025',
+    title: "لَمَّةْ l'ifag",
+    image: '/actu/lemma-video.mp4',
+    description:
+      'Une لَمَّةْ conviviale et festive et une collecte de dons pour les orphelins en collaboration avec <span style="color: #050DEB; text-shadow: 0 0 10px #050DEB; font-weight: bold;">Nexus Club</span>, <span style="color: #274199; text-shadow: 0 0 10px #274199; font-weight: bold;">MS Club</span> et <span style="color: brown; text-shadow: 0 0 10px brown; font-weight: bold;">in2art</span> réunissant étudiants, professeurs et personnels pour un iftar, une sahra et une cérémonie de récompense des majeurs.',
   },
 ]
 
