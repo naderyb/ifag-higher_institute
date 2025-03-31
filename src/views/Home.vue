@@ -546,15 +546,21 @@ const blogPosts = [
 const clubs = [
   {
     name: 'MS Club',
-    date: '12/03/2021',
+    date: '03/12/2022',
     logo: '/clubs/logo-ms.png',
     instagram: 'https://www.instagram.com/msclub.insag/',
   },
   {
     name: 'Nexus Club',
     date: '18/12/2023',
-    logo: '/clubs/logo-nexus.svg',
+    logo: '/clubs/logo-nexus.png',
     instagram: 'https://www.instagram.com/nexus.club_/',
+  },
+  {
+    name: 'in2art',
+    date: '17/09/2024',
+    logo: '/clubs/logo-in2art.png',
+    instagram: 'https://www.instagram.com/in2.art_insag/',
   },
 ]
 
