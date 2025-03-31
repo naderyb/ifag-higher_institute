@@ -5,7 +5,10 @@ import Recrutement from '../views/Recrutement.vue'
 import MentionsLegales from '@/views/MentionsLegales.vue'
 import Confidentialite from '@/views/Confidentialite.vue'
 import Conditions from '@/views/Conditions.vue'
-
+import ActionCommerciale from '@/views/Formations/ActionCommerciale.vue'
+import FinanceComptabilite from '@/views/Formations/FinanceComptabilite.vue'
+import ComputerScience from '@/views/Formations/ComputerScience.vue'
+import MasterMarketingManagement from '@/views/Formations/MasterMarketingManagement.vue'
 
 const routes = [
   {
@@ -36,6 +39,26 @@ const routes = [
     path: '/conditions',
     name: 'Conditions',
     component: Conditions
+  },
+  {
+    path: '/Formations/action-commerciale',
+    name: 'ActionCommerciale',
+    component: ActionCommerciale
+  },
+  {
+    path: '/Formations/finance-et-comptabilite',
+    name: 'FinanceComptabilite',
+    component: FinanceComptabilite
+  },
+  {
+    path: '/Formations/Informatique',
+    name: 'Informatique',
+    component: ComputerScience
+  },
+  {
+    path: '/Formations/master-marketing-management',
+    name: 'MasterMarketingmanagement',
+    component: MasterMarketingManagement
   },
 ]
 

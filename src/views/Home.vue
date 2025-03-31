@@ -59,7 +59,12 @@
               <img :src="formation.image" class="card-img-top" :alt="formation.title" />
               <div class="card-body text-center">
                 <h5 class="card-title">{{ formation.title }}</h5>
-                <button class="btn btn-outline-danger mt-2">Découvrir la formation</button>
+                <router-link
+                  :to="`/formations/${formation.route}`"
+                  class="btn btn-outline-danger mt-2"
+                >
+                  Découvrir la formation
+                </router-link>
               </div>
             </div>
           </div>
@@ -272,7 +277,6 @@
 </template>
 
 <style scoped>
-
 body {
   overflow-x: hidden;
 }
@@ -472,18 +476,22 @@ const formations = [
   {
     title: 'Licence Commerciale & Marketing -Bac+3-',
     image: '/formations/actionCommercial.png',
+    route: 'action-commerciale',
   },
   {
     title: 'Licence Informatique -Bac+3-',
     image: '/formations/informatique.png',
+    route: 'informatique',
   },
   {
     title: 'Licence en Finance & Comptabilité -Bac+3-',
     image: '/formations/financeComptabilite.png',
+    route: 'finance-et-comptabilite',
   },
   {
     title: 'Master Marketing & Management -Bac+5-',
     image: '/formations/MasterMarketingMarketing.png',
+    route: 'master-marketing-management',
   },
 ]
 
