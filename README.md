@@ -1,15 +1,15 @@
 <div align="center">
-  <img src="https://ifag.edu.dz/logo-ifag.jpg" alt="IFAG Logo" width="120" />
+  <img decoding="async" src="https://ifag.edu.dz/wp-content/uploads/2024/05/ifag-logo-landing-page.png">
 
   <h1>🎓 IFAG Website – Frontend</h1>
 
   <p align="center">
     A modern, responsive, Vue 3 + Bootstrap powered frontend ✨ <br>
     for the <strong>Institut de Formation en Assurances et Gestion (IFAG)</strong><br>
-    Built with <code>&lt;3</code> by Youb Nader
+    Built with <code>&lt;3</code> by Youb Mahmoud Nader
   </p>
 
-  <img src="https://readme-typing-svg.herokuapp.com?font=Poppins&size=22&duration=3000&center=true&vCenter=true&width=500&lines=Modern+UI%2FUX;Vue+3+%2B+Bootstrap+Frontend;Dark+mode+ready+%F0%9F%94%95;SEO+optimized+%F0%9F%93%9D;For+a+clean+backend+integration+%F0%9F%A7%96%E2%80%8D%E2%99%82%EF%B8%8F" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Poppins&size=22&duration=3000&center=true&vCenter=true&width=500&lines=Modern+UI%2FUX;Vue+3+%2B+Bootstrap+Frontend;SEO+optimized+%F0%9F%93%9D;For+a+clean+backend+integration+%F0%9F%A7%96%E2%80%8D%E2%99%82%EF%B8%8F" alt="Typing SVG" />
 </div>
 
 ---
@@ -18,7 +18,7 @@
 This is the frontend for **IFAG**’s new website – completely redesigned from scratch with a focus on:
 
 - ✅ Modern & professional look  
-- 🎯 Mobile-first responsiveness    
+- 🎯 Mobile-first responsiveness  
 - ✨ Animated sections, clean UI, and smooth transitions  
 - 📊 Interactive homepage with formations, alumni, blog, clubs, stats, and more  
 - 💼 SEO-friendly & accessible markup  
@@ -45,8 +45,8 @@ This is the frontend for **IFAG**’s new website – completely redesigned from
 
 ```bash
 # Clone the repo
-git clone https://github.com/your-username/ifag-frontend.git
-cd ifag-frontend
+git clone https://github.com/your-username/ifag-higher-institute.git
+cd ifag-higher-institute
 
 # Install dependencies
 npm install
@@ -106,12 +106,6 @@ If you're part of the backend team or another collaborator, feel free to:
 
 If you're working in parallel, let's sync in GitHub issues or on Discord/WhatsApp 💬
 ---
-
-## 👤 Author
-
-Made with passion 💻 and a touch of red ❤️ by [Youb Nader](https://www.instagram.com/unnamed0._)  
-For the students and future of [IFAG](https://ifag-higher-institute.netlify.app)
----
 ## 📡 Hosting Note
 >🛰️ This site is currently hosted on Netlify as a serverless static site.
 >Please contact me before deploying it on any real or virtual server (Apache, Nginx, etc.) — I’d love to assist and observe the process 💬
@@ -120,5 +114,9 @@ For the students and future of [IFAG](https://ifag-higher-institute.netlify.app)
 ## ⭐️ Show some love
 
 If you like this project, drop a ⭐️ on the GitHub repo or share it around!
+---
+
+Made with passion 💻 and a touch of red ❤️ by [Youb Nader](https://www.instagram.com/unnamed0._)  
+For the students and future of [IFAG](https://ifag-higher-institute.netlify.app)
 ---
 <p align="center" style="opacity: 0.7;"> © 2025 – Made with ❤️ by <strong>Youb Nader</strong> • Built with Vue 3 + Bootstrap </p>
